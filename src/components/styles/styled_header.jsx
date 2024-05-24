@@ -10,19 +10,19 @@ export const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   transition: 0.6s;
-  padding: 40px 100px;
+  padding: 5px 80px;
   z-index: 1000;
 
   &.sticky {
-    padding: 5px 100px;
-    background: #ffffff;
+    padding: 20px 100px;
+    background: #345789;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
   }
 
   .logo {
     position: relative;
     font-weight: 700;
-    color: #83242d;
+    color: #FFFFFF;
     text-decoration: none;
     font-size: 2em;
     text-transform: uppercase;
@@ -33,6 +33,19 @@ export const StyledHeader = styled.header`
       transform: scale(1.2);
     }
   }
+
+  img {
+    max-width: 120px;
+    height: auto;
+    margin-right: 10px;
+    margin-top: 20px;
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  }
+  
+  img:hover {
+    transform: scale(1.2); /* Increase size on hover */
+  }
+  
 
   ul {
     position: relative;
@@ -48,13 +61,14 @@ export const StyledHeader = styled.header`
         position: relative;
         margin: 0 15px;
         text-decoration: none;
-        color: #83242d;
-        letter-spacing: 2px;
+        color: #FFFFFF;
+        letter-spacing: 1px;
         font-weight: 600;
+        font-size: 20px;
 
         &:hover {
-          border-bottom: 2px solid #83242d;
-          color: #000;
+          border-bottom: 2px solid #47bfbf;
+          color: #47bfbf;
         }
       }
     }
@@ -82,9 +96,9 @@ export const StyledHeader = styled.header`
       top: 6px;
       width: 100%;
       height: 4px;
-      background: #83242d;
+      background: #ffffff;
       z-index: 1;
-      box-shadow: 0 10px 0 #83242d;
+      box-shadow: 0 10px 0 #ffffff;
       transition: 0.5s;
       border-radius: 2px; /* Add rounded edges */
     }
@@ -95,7 +109,7 @@ export const StyledHeader = styled.header`
       bottom: 1px;
       width: 100%;
       height: 4px;
-      background: #83242d;
+      background: #ffffff;
       z-index: 1;
       transition: 0.5s;
       border-radius: 2px; /* Add rounded edges */
@@ -104,7 +118,7 @@ export const StyledHeader = styled.header`
     &,
     &.sticky{
       padding: 5px 50px;
-      background: #fff;
+      background: #47bfbf;
       border-bottom: 1px solid rgba(0, 0, 0, .1);
     }
 
@@ -112,13 +126,13 @@ export const StyledHeader = styled.header`
   
     ul {
       position: absolute;
-      top: 59px;
+      top: 100px;
       left: 0;
       width: 100%;
       text-align: center;
       height: 0;
       overflow: hidden;
-      background: #fff;
+      background: #47bfbf;
       visibility: hidden;
       opacity: 0;
       transition: max-height 0.5s ease, visibility 0.5s ease, opacity 0.5s ease;
@@ -138,26 +152,25 @@ export const StyledHeader = styled.header`
       display: inline-block;
       margin: 10px 0;
       font-size: 20px;
-      color: #83242d;
+      color: #ffffff;
     }
   
 
     &.active ul li a:hover {
-      border-bottom: 2px solid #83242d;
+      speed: 250;
+      border-bottom: 2px solid #345789;
       color: #000;
     }
 
 
     .sticky .logo,
     .sticky ul li a {
-      color: #83242d;
+      color: #345789;
     }
   }  
+  
 
-  @media (max-width: 576px) {
-    & {
-      padding: 20px;
-    }
+
   }
 `;
 
